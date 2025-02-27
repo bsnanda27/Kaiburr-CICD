@@ -40,6 +40,9 @@ jobs:
         run: |
               cd task-1-java-backend-api
               mvn test
+      
+      - name: Debug - Check Target Directory
+        run: ls -R task-1-java-backend-api/target
         
 
   docker-build:
