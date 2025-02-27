@@ -33,7 +33,7 @@ jobs:
       - name: Build with Maven
         run: |
               cd task-1-java-backend-api
-              mvn clean package
+              mvn clean package -DskipTests
     
 
       - name: Run Unit Tests
