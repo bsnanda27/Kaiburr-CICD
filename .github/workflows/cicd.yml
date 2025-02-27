@@ -93,3 +93,9 @@ jobs:
               cd task-1-java-backend-api
               kubectl apply -f k8s/deployment.yaml
               kubectl rollout status deployment task-api-deployment
+                    
+      - name: Check Kubernetes Pods
+        run: |
+              kubectl get pods
+              kubectl logs -l app=task-api
+              kubectl get services
