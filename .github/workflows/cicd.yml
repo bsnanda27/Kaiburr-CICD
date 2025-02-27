@@ -75,11 +75,11 @@ jobs:
       - name: Tag Docker Image
         run: |
               cd task-1-java-backend-api
-              docker tag myapp:latest bsnanda27/task-api:latest
+              docker tag myapp:latest ${{ secrets.DOCKER_USERNAME }}/task-api:latest
 
       - name: Push to Docker Hub
         run: |
-              docker push bsnanda27/task-api:latest
+              docker push ${{ secrets.DOCKER_USERNAME }}/task-api:latest
 
   deploy:
     name: Deploy to Kubernetes
@@ -89,9 +89,10 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v3
 
-      - name: Setup kubectl
-        uses: azure/setup-kubectl@v3
-
+      - name: Start Minikube
+        run: |
+              minikube start
+      
       - name: Deploy to Kubernetes
         run: |
               cd task-1-java-backend-api
