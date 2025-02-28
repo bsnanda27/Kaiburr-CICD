@@ -32,7 +32,7 @@ The pipeline is triggered on:
 
 ## Pipeline Stages
 
-![Task 4](SCREENSHOT/Task4-Pipeline.png)
+![Task 4](SCREENSHOTS/Task4-Pipeline.png)
 
 ### 1. Build and Test
 
@@ -60,11 +60,11 @@ The pipeline is triggered on:
 
 - Pushes the Docker image to Docker Hub.
 
-![Task 4](SCREENSHOT/Task4-build.png)
+![Task 4](SCREENSHOTS/Task4-build.png)
 
-![Task 4](SCREENSHOT/Task4-push.png)
+![Task 4](SCREENSHOTS/Task4-push.png)
 
-![Task 4](SCREENSHOT/Task4-Docker.png)
+![Task 4](SCREENSHOTS/Task4-Docker.png)
 
 
 ### 3. Deploy to Kubernetes
@@ -91,7 +91,7 @@ After deployment, verify the application is running using:
 - Check Service
 `kubectl get services`
 
-![Task 4](SCREENSHOT/Task4-k8s.png)
+![Task 4](SCREENSHOTS/Task4-k8s.png)
 
 ## Conclusion
 This pipeline automates the entire process of building, testing, containerizing, and deploying the Task Manager application to a Kubernetes cluster, ensuring a smooth and dependable deployment workflow.
