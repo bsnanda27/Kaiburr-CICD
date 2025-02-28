@@ -14,6 +14,20 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: bsnanda27/task-api:latest
+          image: ${{ secrets.DOCKER_USERNAME }}/task-api:latest
           ports:
             - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-api-service
+spec:
+  selector:
+    app: myapp
+  ports:
+    - protocol: TCP
+      port: 30008  # NodePort to access externally
+      targetPort: 8080  # Inside the container
+      nodePort: 30008  # Fixed external port (range: 30000-32767)
+  type: NodePort
