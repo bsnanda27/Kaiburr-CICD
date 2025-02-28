@@ -101,5 +101,5 @@ jobs:
       - name: Check Kubernetes Pods
         run: |
               kubectl get pods
-              kubectl logs -l app=task-api
+              kubectl logs -l app=my-app
               kubectl get services
