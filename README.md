@@ -91,7 +91,7 @@ After deployment, verify the application is running using:
 - Check Service
 `kubectl get services`
 
-![Task 4](SCREENSHOTS/Task4-k8s.png)
+![Task 4](SCREENSHOTS/Task4-K8s.png)
 
 ## Conclusion
 This pipeline automates the entire process of building, testing, containerizing, and deploying the Task Manager application to a Kubernetes cluster, ensuring a smooth and dependable deployment workflow.
