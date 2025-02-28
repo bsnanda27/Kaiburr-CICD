@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: myapp
-          image: ${{ secrets.DOCKER_USERNAME }}/task-api:latest
+          image: bsnanda27/task-api:latest
           ports:
             - containerPort: 8080
 ---
